@@ -1,180 +1,108 @@
-IMPETIK Inventory Management
+#  **Impetik Inventory Management System**
 
-Developed by: Abdullahi
+A clean, well-structured full-stack inventory dashboard for managing
+store products, viewing stock analytics, and maintaining accurate
+inventory records.
 
-IMPETIK Inventory Management is a full-stack application designed to help store managers efficiently track and manage their product inventory. The app provides simple CRUD functionality for products, allowing the manager to create, read, update, and delete product records.
+##  **Tech Stack**
 
-Key Features
+![Static Badge](https://img.shields.io/badge/Frontend-React-blue)
+![Static Badge](https://img.shields.io/badge/Backend-Node.js-green)
+![Static Badge](https://img.shields.io/badge/Database-PostgreSQL-blue)
+![Static Badge](https://img.shields.io/badge/Charts-Recharts-orange)
+![Static Badge](https://img.shields.io/badge/Status-Completed-success)
 
-CRUD operations for products (Create, Read, Update, Delete)
+##  **Features**
 
-Simple and clean user interface for quick management
+###  Core Features
 
-Responsive design for use on different devices
+-   Full CRUD operations for products
+-   Product model with: **name, description, price, image, quantity**
+-   Low stock alert (**quantity \< 5**)
+-   Clean dashboard table/grid display
+-   Add & Edit product form
+-   Stock analytics using **Recharts**
+-   Form and backend **validation**
 
-Connected to PostgreSQL for reliable data storage
+###  Bonus Features Implemented
 
-Tech Stack
+-    Search products by name
+-    Visual analytics (bar chart / pie chart)
+-    Modern UI with clean layout
+-    Fully responsive design
+-    Organized & scalable folder structure
 
-Frontend: React (vanilla JavaScript)
+##  **Project Structure**
 
-Backend: Node.js, Express.js
+    Impetik Inventory Management/
+    │
+    ├── backend/
+    │   ├── controllers/
+    │   ├── models/
+    │   ├── routes/
+    │   ├── middleware/
+    │   ├── db.js
+    │   └── server.js
+    │
+    └── frontend/
+        ├── src/
+        │   ├── api/
+        │   ├── components/
+        │   ├── pages/
+        │   ├── charts/
+        │   ├── styles/
+        │   ├── App.jsx
+        │   └── main.jsx
 
-Database: PostgreSQL
+##  **Installation & Setup**
 
-Why this tech stack:
-While I am currently focusing on Java for fintech and enterprise projects, I chose this stack for IMPETIK because React and Node.js/Express allow fast development, flexibility, and I am comfortable working with them. PostgreSQL ensures reliable and structured data storage, which is essential for inventory management.
+###  Backend Setup
 
-Installation and Setup
-Backend
-
-Navigate to the backend folder:
-
+``` bash
 cd backend
-
-
-Install dependencies:
-
 npm install
+```
 
+Create a `.env` file:
 
-Create a .env file with the following content:
+    DATABASE_URL=your_postgres_connection_string
+    PORT=5000
 
-PORT=3000
-PG_USER=postgres
-PG_PASSWORD=123
-PG_HOST=localhost
-PG_PORT=5432
-PG_DATABASE=impetik_inventory_management
+Start the server:
 
-
-Run database migrations or create tables if needed. (You can also run the provided seed script to populate sample products.)
-
-Start the backend server:
-
-npm run dev
-
-
-The backend API will be running at: http://localhost:3000/api
-
-Frontend
-
-Navigate to the frontend folder:
-
-cd frontend
-
-
-Install dependencies:
-
-npm install
-
-
-Create a .env file with the following content:
-
-BASE=http://localhost:3000/api
-
-
-Start the frontend server:
-
+``` bash
 npm start
+```
 
+###  Frontend Setup
 
-The app will open in your browser at: http://localhost:3001
+``` bash
+cd frontend
+npm install
+npm run dev
+```
 
-Seed Data
+##  **API Endpoints**
 
-To test the application, you can use the following sample products:
+  Method   Endpoint        Description
+  -------- --------------- --------------------
+  GET      /products       Get all products
+  POST     /products       Create new product
+  PUT      /products/:id   Update product
+  DELETE   /products/:id   Delete product
 
+##  **Why This Stack?**
 
-  {
-    "name": "Apple iPhone 14",
-    "description": "Latest iPhone model",
-    "price": 999,
-    "image": "https://example.com/iphone14.jpg",
-    "quantity": 4
-  },
+I chose **React + Node.js + PostgreSQL** because:
 
+-    Fast development with clean separation of frontend & backend
+-    PostgreSQL is reliable and perfect for structured product data
+-    Recharts integrates smoothly with React for clean analytics
+-    Express provides a robust and scalable API layer
 
-You can import this data via a seed script or manually using the app.
+##  **Author**
 
-Usage
+**Abdullahi Abdirizak** GitHub: https://github.com/zallaqa
 
-Open the app in your browser.
-
-Add new products with their name, description, price, quantity, and image.
-
-Edit or delete existing products as needed.
-
-Monitor your inventory in the product list.
-
-## Folder Structure
-
-Backend Folder Strucutre
-
-backend/
-│
-├─ src/
-│   ├─ config/
-│   │   └─ db.js            # PostgreSQL connection
-│   │
-│   ├─ routes/
-│   │   └─ productRoutes.js
-│   │
-│   ├─ controllers/
-│   │   └─ productController.js
-│   │
-│   ├─ services/
-│   │   └─ productService.js # Business logic
-│   │
-│   ├─ models/
-│   │   └─ productModel.js   # SQL queries (or Prisma schema)
-│   │
-│   ├─ middlewares/
-│   │   └─ validateProduct.js
-│   │
-│   ├─ utils/
-│   │   └─ errorHandler.js
-│   │
-│   ├─ app.js               # Express app
-│   └─ server.js            # Start server
-│
-├─ package.json
-├─ .env
-
-Frontend Struc
-
-frontend/
-│
-├─ src/
-│   ├─ api/
-│   │   └─ products.ts         # fetchProducts, addProduct etc
-│   │
-│   ├─ components/
-│   │   ├─ ProductTable.tsx
-│   │   ├─ ProductForm.tsx
-│   │   ├─ AnalyticsChart.tsx
-│   │   └─ LowStockBadge.tsx
-│   │
-│   ├─ pages/
-│   │   └─ Dashboard.tsx
-│   │
-│   
-│   │   
-│   │
-│   ├─ styles/
-│   │   └─ globals.css
-│   │
-│   ├─ utils/
-│   │   └─ formatters.ts
-│   │
-│   ├─ App.tsx
-│   └─ main.tsx
-│
-├─ public/
-├─ package.json
-
-    └─ main.css
-
-Screenshots
-
+##  **Submission**
 
