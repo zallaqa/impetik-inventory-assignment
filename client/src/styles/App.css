@@ -1,0 +1,42 @@
+
+.dashboard-layout{
+    display: flex;
+    height: 100vh;
+}
+
+
+
+/* Sidebar */
+
+.dashboard-layout .sidebar{
+    width: 12%;
+    background-color: var(--bg);
+    color: var(--muted);
+}
+
+/* Main area topbar + content */
+
+.main-area{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+/* Top */
+
+.main-area > .topbar{
+    height: 10%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.content{
+    flex: 1;  /*fills rh rem hieght*/
+    overflow-y: auto;
+
+}

@@ -1,0 +1,20 @@
+
+
+.topbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.top_user{
+    width: 13%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 1rem;
+
+
+}

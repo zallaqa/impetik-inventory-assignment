@@ -1,0 +1,17 @@
+.chart-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255,255,255,0.05);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
+
+  }
+  

@@ -1,0 +1,18 @@
+:root{
+    --bg: #050E45;
+    --panel: #1a164a;
+    --accent: #F900C5;
+    --muted: #9aa6b2;
+  }
+
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+}

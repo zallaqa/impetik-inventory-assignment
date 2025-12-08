@@ -1,0 +1,262 @@
+/* Page Wrapper */
+.product-page {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Top Controls */
+  .top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .top-controls h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  /* Search Form + Add Button */
+  .action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .search-form input {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 180px;
+  }
+  
+  .search-form button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #0066ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .primary {
+    padding: 8px 12px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Table Style */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+  
+  thead {
+    background: #f0f0f0;
+  }
+  
+  th,
+  td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+  }
+  
+  /* Actions Column */
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .actions button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .actions .detail {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .actions .edit {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .actions .delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Loading + Error */
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  /* Modal Form */
+  .modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-box {
+    background: white;
+    padding: 20px;
+    width: 450px;
+    border-radius: 10px;
+  }
+  
+
+
+
+  /* ===== PRODUCT FORM (MODAL) ===== */
+
+.product-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Form Box */
+.product-form {
+  background: #fff;
+  width: 450px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.product-form h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.product-form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Error Message */
+.product-form .error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: -5px;
+}
+
+/* Form Buttons */
+.form-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-buttons .primary {
+  background: #007bff;
+  color: white;
+}
+
+.form-buttons button:not(.primary) {
+  background: #e5e5e5;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ===== PRODUCT DETAIL PAGE ===== */
+
+.product-detailPage {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.product-detailPage button {
+  padding: 8px 12px;
+  width: 80px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.product-detailPage h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.product-detailPage .detail-img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.product-detailPage p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.product-detailPage p:last-child {
+  font-weight: 600;
+}
