@@ -12,6 +12,11 @@ inventory records.
 ![Static Badge](https://img.shields.io/badge/Charts-Recharts-orange)
 ![Static Badge](https://img.shields.io/badge/Status-Completed-success)
 
+![Image Alt](https://github.com/zallaqa/impetik-inventory-assignment/blob/1ec394c1ee5468f0abcefded1ae1688de4697dc3/m1.png).
+![Image Alt](https://github.com/zallaqa/impetik-inventory-assignment/blob/1ec394c1ee5468f0abcefded1ae1688de4697dc3/m2.png).
+![Image Alt](https://github.com/zallaqa/impetik-inventory-assignment/blob/1ec394c1ee5468f0abcefded1ae1688de4697dc3/m3.png).
+
+
 ##  **Features**
 
 ###  Core Features
