@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { fetchProducts } from "../api/products.js";
-import "../styles/LowStockTable.css";
 
 export default function LowStockTable() {
   const [lowStock, setLowStock] = useState([]);
@@ -22,13 +21,13 @@ export default function LowStockTable() {
   }, []);
 
   return (
-    <div className="">
+    <div className="lowStock">
       <h2>Low Stock Products</h2>
 
       {lowStock.length === 0 ? (
-        <p>No products are currently low on stock 🎉</p>
+        <p>No products are currently low on stock </p>
       ) : (
-        <table className="">
+        <table className="lowStockCont-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -39,10 +38,10 @@ export default function LowStockTable() {
 
           <tbody>
             {lowStock.map(p => (
-              <tr key={p.id} className="">
+              <tr key={p.id}>
                 <td>{p.name}</td>
                 <td>{p.quantity}</td>
-                <td className="status">⚠️ Low Stock</td>
+                <td className="alert-table">⚠️ Low Stock</td>
               </tr>
             ))}
           </tbody>

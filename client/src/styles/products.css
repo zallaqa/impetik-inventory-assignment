@@ -76,6 +76,12 @@
     border-bottom: 1px solid #e5e5e5;
     text-align: left;
   }
+
+  .alert-table{
+    color: #b91c1c;
+    font-weight: 600;
+  }
+
   
   /* Actions Column */
   .actions {

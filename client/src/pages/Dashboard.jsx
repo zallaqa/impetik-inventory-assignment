@@ -19,13 +19,12 @@ const Dashboard = () => {
     load();
   }, [])
 
- // Total products
   const totalProducts = products.length;
- // Low stock 
+
   const lowStockCount = products.filter(p => Number(p.quantity) <5).length;
-  // Sum of all stock quantities
+  
   const totalStockQty  = products.reduce(
-    (sum,p) => + Number(p.quantity),
+    (sum,p) => sum + Number(p.quantity),
     0
   );
   //New products today

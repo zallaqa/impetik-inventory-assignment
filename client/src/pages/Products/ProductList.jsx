@@ -126,7 +126,7 @@ const ProductList = () => {
       {showForm && (
         <ProductForm
           product={editing}
-          onClose={() => { setShowForm(false); load(search); }}
+          onclose={() => { setShowForm(false); load(search); }}
         />
       )}
     </div>
