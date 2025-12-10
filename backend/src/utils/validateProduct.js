@@ -2,7 +2,6 @@ export const validateProduct = async (req , res ,next) =>{
 
     const{ name, price ,quantity , image } = req.body;
 
-    //checking name
     if(!name || typeof name !== 'string' || name.trim().length === 0){
         return res.status(400).json({ error: 'Name is required' })
     }
@@ -21,7 +20,6 @@ export const validateProduct = async (req , res ,next) =>{
 
 
     if (image && typeof image === 'string') {
-        // simple url check
         const isUrl = /^(https?:\/\/)/.test(image);
         if (image.length > 0 && !isUrl) {
           return res.status(400).json({ error: 'Image must be a valid URL or empty' });
